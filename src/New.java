@@ -1,6 +1,6 @@
 public abstract class New {
 
-    //atributs
+
     private String holder;
     private String text;
     private int punctuation;
@@ -36,10 +36,9 @@ public abstract class New {
     }
 
 
-    //mètodes generals
+
     public abstract String calculatePrice(String holder);
     public abstract String calculatePunctuation(String holder);
-
-    //mètodes propis
+    
 
 }

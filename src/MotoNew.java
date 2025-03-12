@@ -35,6 +35,5 @@ public class MotoNew extends New{
         }
         return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
     }
-    //mètodes propis
 
 }
