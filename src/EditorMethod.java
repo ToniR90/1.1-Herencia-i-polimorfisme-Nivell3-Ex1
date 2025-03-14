@@ -1,7 +1,6 @@
 public class EditorMethod {
 
     public static String createEditor(String name, String dni) {
-        int i = 0;
         String answer = "";
 
         if(searchEditor(dni) != -1){

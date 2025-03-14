@@ -4,14 +4,13 @@ public class Controllers {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static int processOption(){
+    public static void processOption(int option){
 
         String name;
         String dni;
         int newsOption;
         String answer = "";
         String headline;
-        int option = Menu.userOption();
 
         do{
 
@@ -28,12 +27,12 @@ public class Controllers {
                     name = scanner.nextLine();
                     System.out.println("Insert editor's DNI");
                     dni = scanner.nextLine();
-                    answer = EditorMethod.deleteEditor(name , dni);
+                    answer = EditorMethod.deleteEditor(dni);
                     break;
                 case 3:
-                    newsOption = Menu.newsTipeOption();
+                    newsOption = Menu.newsTypeOption();
                     scanner.nextLine();
-                    processNewsOptions(newsOption);
+                    processNewsOptions();
                     break;
                 case 4:
                     System.out.println("Insert editor's name");
@@ -84,26 +83,26 @@ public class Controllers {
             answer ="";
         }while(option != 0);
 
-        return option;
     }
 
-    public static void processNewsOptions(int newsOption){
+    public static void processNewsOptions(){
 
         String headline;
         String competition;
         String club;
         String player;
-        String name;
         String dni;
         String answer = "";
         String player1;
         String player2;
         String team;
         String motoTeam;
+        int option;
 
         do{
+            option = Menu.userOption();
             scanner.nextLine();
-            switch(newsOption){
+            switch(option){
                 case 1:
                     System.out.println("Insert the headline");
                     headline = scanner.nextLine();
@@ -113,11 +112,9 @@ public class Controllers {
                     club = scanner.nextLine();
                     System.out.println("Any famous player?");
                     player = scanner.nextLine();
-                    System.out.println("Which editor will carry the news?");
-                    name = scanner.nextLine();
-                    System.out.println("Verify the DNI");
+                    System.out.println("Verify the editor's DNI");
                     dni = scanner.nextLine();
-                    answer = NewsMethod.createFutbolNews(headline , competition , club , player , name , dni);
+                    answer = NewsMethod.createFutbolNews(headline , competition , club , player , dni);
                     break;
                 case 2:
                     System.out.println("Insert the headline");
@@ -126,11 +123,9 @@ public class Controllers {
                     competition = scanner.nextLine();
                     System.out.println("What club is the news about?");
                     club = scanner.nextLine();
-                    System.out.println("Which editor will carry the news?");
-                    name = scanner.nextLine();
-                    System.out.println("Verify the DNI");
+                    System.out.println("Verify the editor's DNI");
                     dni = scanner.nextLine();
-                    answer = NewsMethod.createBasketNews(headline , competition , club , name , dni);
+                    answer = NewsMethod.createBasketNews(headline , competition , club , dni);
                     break;
                 case 3:
                     System.out.println("Insert the headline");
@@ -141,33 +136,27 @@ public class Controllers {
                     player1 = scanner.nextLine();
                     System.out.println("Insert the name of the second tennis player");
                     player2 = scanner.nextLine();
-                    System.out.println("Which editor will carry the news?");
-                    name = scanner.nextLine();
-                    System.out.println("Verify the DNI");
+                    System.out.println("Verify the editor's DNI");
                     dni = scanner.nextLine();
-                    answer = NewsMethod.createTennisNews(headline , competition , player1 , player2 , name , dni);
+                    answer = NewsMethod.createTennisNews(headline , competition , player1 , player2 , dni);
                     break;
                 case 4:
                     System.out.println("Insert the headline");
                     headline = scanner.nextLine();
                     System.out.println("What team is running in the race?");
                     team = scanner.nextLine();
-                    System.out.println("Which editor will carry the news?");
-                    name = scanner.nextLine();
-                    System.out.println("Verify the DNI");
+                    System.out.println("Verify the editor's DNI");
                     dni = scanner.nextLine();
-                    answer = NewsMethod.createF1News(headline , team , name , dni);
+                    answer = NewsMethod.createF1News(headline , team , dni);
                     break;
                 case 5:
                     System.out.println("Insert the headline");
                     headline = scanner.nextLine();
                     System.out.println("What team is running in the race?");
                     motoTeam = scanner.nextLine();
-                    System.out.println("Which editor will carry the news?");
-                    name = scanner.nextLine();
-                    System.out.println("Verify the DNI");
+                    System.out.println("Verify the editor's DNI");
                     dni = scanner.nextLine();
-                    answer = NewsMethod.createMotoNews(headline , motoTeam , name , dni);
+                    answer = NewsMethod.createMotoNews(headline , motoTeam , dni);
                     break;
                 case 0:
                     answer = "See you!";
@@ -176,8 +165,8 @@ public class Controllers {
                     answer = "Select an option between 1 - 5";
             }
 
-           System.out.println(answer);
-            answer = "";
-        }while(newsOption != 0);
+            System.out.println(answer);
+
+        }while(option != 0);
     }
 }

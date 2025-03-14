@@ -7,8 +7,9 @@ public class Main {
         static ArrayList<News> news = new ArrayList<News>();
 
         public static void main(String[] args) {
-
+            System.out.println("Welcome to the News Management System!");
             Menu.startMenu();
+            System.out.println("Thank you for using the system. Goodbye!");
         }
 
 

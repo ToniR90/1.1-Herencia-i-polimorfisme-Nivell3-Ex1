@@ -9,7 +9,7 @@ public class Menu {
 
         do{
             option = userOption();
-            Controllers.processOption();
+            Controllers.processOption(option);
 
         }while(option != 0);
     }
@@ -32,7 +32,7 @@ public class Menu {
         return option;
     }
 
-    public static int newsTipeOption(){
+    public static int newsTypeOption(){
         int option;
 
         System.out.println("Select the type of news\n" +

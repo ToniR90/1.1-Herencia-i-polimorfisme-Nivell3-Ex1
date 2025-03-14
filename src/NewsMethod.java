@@ -1,7 +1,7 @@
 public class NewsMethod {
 
-    public static String createNews(News news , String name , String dni){
-        int index = EditorMethod.searchEditor(name, dni);
+    public static String createNews(News news , String dni){
+        int index = EditorMethod.searchEditor(dni);
         String answer;
         if (index == -1) {
             answer = "The profile doesn't exist in the database";
@@ -14,33 +14,33 @@ public class NewsMethod {
     }
 
     public static String createFutbolNews(String headline , String competition, String club, String player,
-                                            String name, String dni) {
-        return createNews(new FutbolNews(headline , competition , club , player) , name , dni);
+                                            String dni) {
+        return createNews(new FutbolNews(headline , competition , club , player) , dni);
     }
 
-    public static String createBasketNews(String headline, String competition, String club, String name,
+    public static String createBasketNews(String headline, String competition, String club,
                                              String dni) {
-        return createNews(new BasketNews(headline , competition , club) , name , dni);
+        return createNews(new BasketNews(headline , competition , club) , dni);
     }
 
     public static String createTennisNews(String headline, String competition, String player1,
-                                           String player2, String name, String dni) {
-        return createNews(new TennisNews(headline , competition , player1 , player2) , name , dni);
+                                           String player2, String dni) {
+        return createNews(new TennisNews(headline , competition , player1 , player2) , dni);
     }
 
-    public static String createF1News(String headline, String team, String name, String dni) {
-        return createNews(new F1News(headline , team) , name , dni);
+    public static String createF1News(String headline, String team, String dni) {
+        return createNews(new F1News(headline , team) , dni);
     }
 
-    public static String createMotoNews(String headline, String motoTeam, String name, String dni) {
-       return createNews(new MotoNews(headline , motoTeam) , name , dni);
+    public static String createMotoNews(String headline, String motoTeam, String dni) {
+       return createNews(new MotoNews(headline , motoTeam) , dni);
     }
 
     public static String deleteNews(String name, String dni , String headline) {
         String answer = "";
         int i = 0;
         boolean found = false;
-        int index = EditorMethod.searchEditor(name , dni);
+        int index = EditorMethod.searchEditor(dni);
 
         if (index == -1) {
             answer = "The profile doesn't exist in the database";
@@ -62,7 +62,7 @@ public class NewsMethod {
     public static String showNews(String name, String dni) {
         String answer = "";
         int i = 0;
-        int index = EditorMethod.searchEditor(name , dni);
+        int index = EditorMethod.searchEditor(dni);
 
         if (index == -1) {
             answer = "The profile doesn't exist in the database";
