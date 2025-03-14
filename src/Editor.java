@@ -22,26 +22,26 @@ public class Editor {
     public String getDni() {
         return this.DNI;
     }
-    public int getSalary() {
+    /*public int getSalary() {
         return this.salary;
-    }
+    }*/
     public ArrayList<New> getNews(){
         return this.news;
     }
 
 
-    public void setName(String name) {
+    /*public void setName(String name) {
         this.name = name;
     }
     public void setSalary(int salary) {
         this.salary = salary;
-    }
+    }*/
     public void setNews(New news) {
         this.news.add(news);
     }
 
 
-    public String toString() {
+    /*public String toString() {
         return "Editor: " + this.name + "\nDni: " + this.DNI + "\nSalary: " + this.salary + " €";
-    }
+    }*/
 }

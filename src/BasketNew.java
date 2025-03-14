@@ -4,14 +4,14 @@ public class BasketNew extends New{
     private String club;
 
 
-    public BasketNew(String holder , String text , String competition , String club) {
-        super(holder);
+    public BasketNew(String headline , String competition , String club) {
+        super(headline);
         this.competition = competition;
         this.club = club;
     }
 
 
-    public String getCompetition() {
+    /*public String getCompetition() {
         return this.competition;
     }
     public String getClub() {
@@ -24,10 +24,10 @@ public class BasketNew extends New{
     }
     public void setClub(String club) {
         this.club = club;
-    }
+    }*/
 
 
-    public String calculatePrice(String holder) {
+    public String calculatePrice(String headline) {
         int finalPrice = 250;
 
         if(this.competition.equalsIgnoreCase("eurolliga")) {
@@ -39,7 +39,7 @@ public class BasketNew extends New{
         return "El preu de la noticia és de " + finalPrice + " €\n";
     }
 
-    public String calculatePunctuation(String holder) {
+    public String calculateScore(String headline) {
         int finalPunctuation = 4;
 
         if(this.competition.equalsIgnoreCase("eurolliga")) {

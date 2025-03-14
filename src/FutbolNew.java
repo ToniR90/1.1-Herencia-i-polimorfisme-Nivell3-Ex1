@@ -5,15 +5,14 @@ public class FutbolNew extends New{
     private String player;
 
 
-    //constructor
-    public FutbolNew(String holder, String text , String competition , String club , String player) {
-        super(holder);
+    public FutbolNew(String headline , String competition , String club , String player) {
+        super(headline);
         this.competition = competition;
         this.club = club;
         this.player = player;
     }
 
-    public String getCompetition() {
+    /*public String getCompetition() {
         return this.competition;
     }
     public String getClub() {
@@ -21,10 +20,10 @@ public class FutbolNew extends New{
     }
     public String getPlayer() {
         return this.player;
-    }
+    }*/
 
 
-    public void setCompetition(String competition) {
+    /*public void setCompetition(String competition) {
         this.competition = competition;
     }
     public void setClub(String club) {
@@ -32,10 +31,10 @@ public class FutbolNew extends New{
     }
     public void setPlayer(String player) {
         this.player = player;
-    }
+    }*/
 
 
-    public String calculatePrice(String holder) {
+    public String calculatePrice(String headline) {
         int finalPrice = 300;
 
         if(this.competition.equalsIgnoreCase("lliga de campions")) {
@@ -51,7 +50,7 @@ public class FutbolNew extends New{
         return "El preu de la noticia és de " + finalPrice + " €\n";
     }
 
-    public String calculatePunctuation(String holder) {
+    public String calculateScore(String headline) {
         int finalPunctuation = 5;
 
         if(this.competition.equalsIgnoreCase("lliga de campions")) {

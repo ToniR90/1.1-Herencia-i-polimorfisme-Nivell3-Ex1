@@ -1,23 +1,23 @@
 public abstract class New {
 
 
-    private String holder;
+    private String headline;
     private String text;
-    private int punctuation;
+    private int score;
     private int price;
 
 
-    public New(String holder) {
-        this.holder = holder;
+    public New(String headline) {
+        this.headline = headline;
         this.text = "";
-        this.punctuation = 0;
+        this.score = 0;
         this.price = 0;
     }
 
-    public String getHolder() {
-        return this.holder;
+    public String getHeadline() {
+        return this.headline;
     }
-    public String getText() {
+    /*public String getText() {
         return this.text;
     }
     public int getPunctuation() {
@@ -25,20 +25,20 @@ public abstract class New {
     }
     public double getPrice() {
         return this.price;
-    }
+    }*/
 
 
-    public void setHolder(String holder) {
+    /*public void setHolder(String holder) {
         this.holder = holder;
     }
     public void setText(String text) {
         this.text = text;
-    }
+    }*/
 
 
 
-    public abstract String calculatePrice(String holder);
-    public abstract String calculatePunctuation(String holder);
+    public abstract String calculatePrice(String headline);
+    public abstract String calculateScore(String headline);
     
 
 }

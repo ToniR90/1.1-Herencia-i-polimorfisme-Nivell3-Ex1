@@ -5,15 +5,15 @@ public class TennisNew extends New{
     private String player2;
 
 
-    public TennisNew(String holder , String text , String competition , String player1 , String player2) {
-        super(holder);
+    public TennisNew(String headline , String competition , String player1 , String player2) {
+        super(headline);
         this.competition = competition;
         this.player1 = player1;
         this.player2 = player2;
     }
 
 
-    public String getCompetition() {
+    /*public String getCompetition() {
         return this.competition;
     }
     public String getPlayer1() {
@@ -32,10 +32,10 @@ public class TennisNew extends New{
     }
     public void setPlayer2(String player2) {
         this.player2 = player2;
-    }
+    }*/
 
 
-    public String calculatePrice(String holder) {
+    public String calculatePrice(String headline) {
         int finalPrice = 150;
 
         if (this.player1.equalsIgnoreCase("federer") || this.player1.equalsIgnoreCase("nadal")
@@ -47,7 +47,7 @@ public class TennisNew extends New{
     }
         return "El preu de la noticia és de " + finalPrice + " €\n";
     }
-    public String calculatePunctuation(String holder) {
+    public String calculateScore(String headline) {
         int finalPunctuation = 4;
 
         if (this.player1.equalsIgnoreCase("federer") || this.player1.equalsIgnoreCase("nadal")

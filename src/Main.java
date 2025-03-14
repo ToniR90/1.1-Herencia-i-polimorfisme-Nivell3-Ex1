@@ -8,9 +8,12 @@ public class Main {
         static ArrayList<New> news = new ArrayList<New>();
 
         public static void main(String[] args) {
-            // TODO Auto-generated method stub
 
-            int opcio = 0;
+            Menu.startMenu();
+        }
+
+
+            /*int opcio = 0;
             int opcio2 = 0;
             String resposta = "";
             String resposta2 = "";
@@ -206,12 +209,12 @@ public class Main {
                 resposta = "";
 
             } while (opcio != 0);
-            scanner.close();
-        }
+            scanner.close();*/
+       // }
 
         // mètodes personalitzats
 
-        public static String crearRedactor(String nom, String dni) { // creació de redactors
+        /*public static String crearRedactor(String nom, String dni) { // creació de redactors
             int i = 0;
             String resposta = "";
             int varControl = 0;
@@ -232,9 +235,9 @@ public class Main {
                 resposta = "Redactor/a creat correctament";
             }
             return resposta;
-        }
+        }*/
 
-        public static int buscarRedactor(String nom, String dni) { // mètode per buscar redactors
+        /*public static int buscarRedactor(String nom, String dni) { // mètode per buscar redactors
             int posicioArray = -1;
             int i = 0;
             boolean trobat = false;
@@ -248,9 +251,9 @@ public class Main {
                 }
             }
             return posicioArray;
-        }
+        }*/
 
-        public static String eliminarRedactor(String nom, String dni) { // mètode per eliminar redactors
+        /*public static String eliminarRedactor(String nom, String dni) { // mètode per eliminar redactors
             String resposta = "";
             int posicioArray = buscarRedactor(nom, dni);
 
@@ -261,9 +264,9 @@ public class Main {
                 resposta = "El perfil s'ha esborrat correctament";
             }
             return resposta;
-        }
+        }*/
 
-        public static String eliminarNoticia(String nom, String dni, String titular) { // mètode per eliminar noticies
+        /*public static String eliminarNoticia(String nom, String dni, String titular) { // mètode per eliminar noticies
             String resposta = "";
             int i = 0;
             boolean trobat = false;
@@ -286,9 +289,9 @@ public class Main {
                 }
             }
             return resposta;
-        }
+        }*/
 
-        public static String mostrarNoticia(String nom, String dni) { // mètode per mostrar noticies
+        /*public static String mostrarNoticia(String nom, String dni) { // mètode per mostrar noticies
             String resposta = "";
             int i = 0;
             int posicioArray = buscarRedactor(nom, dni);
@@ -302,9 +305,9 @@ public class Main {
                 }
             }
             return "Els titulars del redactor/a " + nom + " són: \n" + resposta;
-        }
+        }*/
 
-        public static int buscarNoticia(String titular) { // mètode per buscar noticies
+        /*public static int buscarNoticia(String titular) { // mètode per buscar noticies
             int posicioArrayNoticia = -1;
             boolean trobat = false;
             int i = 0;
@@ -320,11 +323,11 @@ public class Main {
                 }
             }
             return posicioArrayNoticia;
-        }
+        }*/
 
         // mètodes per crear objectes noticia
 
-        public static String crearNoticiaFutbol(String titular, String text, String competicio, String club, String jugador,
+        /*public static String crearNoticiaFutbol(String titular, String text, String competicio, String club, String jugador,
                                                 String nom, String dni) {
             String resposta = "";
             int posicioArray = buscarRedactor(nom, dni);
@@ -339,9 +342,9 @@ public class Main {
             }
 
             return resposta;
-        }
+        }*/
 
-        public static String crearNoticiaBasquet(String titular, String text, String competicio, String club, String nom,
+        /*public static String crearNoticiaBasquet(String titular, String text, String competicio, String club, String nom,
                                                  String dni) {
             String resposta = "";
             int posicioArray = buscarRedactor(nom, dni);
@@ -356,9 +359,9 @@ public class Main {
             }
 
             return resposta;
-        }
+        }*/
 
-        public static String crearNoticiaTenis(String titular, String text, String competicio, String tenista1,
+        /*public static String crearNoticiaTenis(String titular, String text, String competicio, String tenista1,
                                                String tenista2, String nom, String dni) {
             String resposta = "";
             int posicioArray = buscarRedactor(nom, dni);
@@ -373,9 +376,9 @@ public class Main {
             }
 
             return resposta;
-        }
+        }*/
 
-        public static String crearNoticiaF1(String titular, String text, String escuderia, String nom, String dni) {
+        /*public static String crearNoticiaF1(String titular, String text, String escuderia, String nom, String dni) {
             String resposta = "";
             int posicioArray = buscarRedactor(nom, dni);
 
@@ -389,9 +392,9 @@ public class Main {
             }
 
             return resposta;
-        }
+        }*/
 
-        public static String crearNoticiaMoto(String titular, String text, String equip, String nom, String dni) {
+        /*public static String crearNoticiaMoto(String titular, String text, String equip, String nom, String dni) {
             String resposta = "";
             int posicioArray = buscarRedactor(nom, dni);
 
@@ -405,6 +408,6 @@ public class Main {
             }
 
             return resposta;
-        }
+        }*/
 
     }

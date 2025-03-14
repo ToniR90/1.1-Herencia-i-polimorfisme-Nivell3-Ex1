@@ -3,22 +3,22 @@ public class F1New extends New{
     private String team;
 
 
-    public F1New(String holder , String text , String team) {
-        super(holder);
+    public F1New(String headline , String team) {
+        super(headline);
         this.team = team;
     }
 
 
-    public String getTeam() {
+    /*public String getTeam() {
         return this.team;
     }
 
     public void setTeam(String team) {
         this.team = team;
-    }
+    }*/
 
 
-    public String calculatePrice(String holder) {
+    public String calculatePrice(String headline) {
         int finalPrice = 100;
 
         if(this.team.equalsIgnoreCase("ferrari") || this.team.equalsIgnoreCase("mercedes")) {
@@ -27,7 +27,7 @@ public class F1New extends New{
         return "El preu de la noticia és de " + finalPrice + " €\n";
     }
 
-    public String calculatePunctuation(String holder) {
+    public String calculateScore(String headline) {
         int finalPunctuation = 4;
 
         if(this.team.equalsIgnoreCase("ferrari") || this.team.equalsIgnoreCase("mercedes")) {
