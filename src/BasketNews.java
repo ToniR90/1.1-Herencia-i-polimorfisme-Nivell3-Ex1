@@ -1,31 +1,14 @@
-public class BasketNew extends New{
+public class BasketNews extends News {
 
     private String competition;
     private String club;
 
 
-    public BasketNew(String headline , String competition , String club) {
+    public BasketNews(String headline , String competition , String club) {
         super(headline);
         this.competition = competition;
         this.club = club;
     }
-
-
-    /*public String getCompetition() {
-        return this.competition;
-    }
-    public String getClub() {
-        return this.club;
-    }
-
-
-    public void setCompetition(String competition) {
-        this.competition = competition;
-    }
-    public void setClub(String club) {
-        this.club = club;
-    }*/
-
 
     public String calculatePrice(String headline) {
         int finalPrice = 250;

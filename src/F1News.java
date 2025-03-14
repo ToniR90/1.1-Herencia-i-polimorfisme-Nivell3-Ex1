@@ -1,21 +1,12 @@
-public class F1New extends New{
+public class F1News extends News {
 
     private String team;
 
 
-    public F1New(String headline , String team) {
+    public F1News(String headline , String team) {
         super(headline);
         this.team = team;
     }
-
-
-    /*public String getTeam() {
-        return this.team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }*/
 
 
     public String calculatePrice(String headline) {
@@ -35,6 +26,5 @@ public class F1New extends New{
         }
         return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
     }
-    //mètodes propis
 
 }

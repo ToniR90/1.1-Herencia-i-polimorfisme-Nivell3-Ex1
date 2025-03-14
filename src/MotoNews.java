@@ -1,22 +1,11 @@
-public class MotoNew extends New{
+public class MotoNews extends News {
 
     private String motoTeam;
 
-    public MotoNew(String headline , String motoTeam) {
+    public MotoNews(String headline , String motoTeam) {
         super(headline);
         this.motoTeam = motoTeam;
     }
-
-
-    /*public String getMotoTeam() {
-        return this.motoTeam;
-    }
-
-
-    public void setMotoTeam(String motoTeam) {
-        this.motoTeam = motoTeam;
-    }*/
-
 
     public String calculatePrice(String headline) {
         int finalPrice = 100;

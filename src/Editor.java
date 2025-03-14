@@ -4,15 +4,14 @@ public class Editor {
 
     private String name;
     private final String DNI;
-    private int salary;
-    private ArrayList<New> news;
+    private static int salary = 1500;
+    private ArrayList<News> news;
 
 
     public Editor(String name , String DNI) {
         this.name = name;
         this.DNI = DNI;
-        this.salary = 1500;
-        this.news = new ArrayList<New>();
+        this.news = new ArrayList<News>();
     }
 
 
@@ -22,26 +21,13 @@ public class Editor {
     public String getDni() {
         return this.DNI;
     }
-    /*public int getSalary() {
-        return this.salary;
-    }*/
-    public ArrayList<New> getNews(){
+    public ArrayList<News> getNews(){
         return this.news;
     }
 
 
-    /*public void setName(String name) {
-        this.name = name;
-    }
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }*/
-    public void setNews(New news) {
+    public void setNews(News news) {
         this.news.add(news);
     }
 
-
-    /*public String toString() {
-        return "Editor: " + this.name + "\nDni: " + this.DNI + "\nSalary: " + this.salary + " €";
-    }*/
 }

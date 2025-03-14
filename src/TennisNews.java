@@ -1,38 +1,16 @@
-public class TennisNew extends New{
+public class TennisNews extends News {
 
     private String competition;
     private String player1;
     private String player2;
 
 
-    public TennisNew(String headline , String competition , String player1 , String player2) {
+    public TennisNews(String headline , String competition , String player1 , String player2) {
         super(headline);
         this.competition = competition;
         this.player1 = player1;
         this.player2 = player2;
     }
-
-
-    /*public String getCompetition() {
-        return this.competition;
-    }
-    public String getPlayer1() {
-        return this.player1;
-    }
-    public String getPlayer2() {
-        return this.player2;
-    }
-
-
-    public void setCompetition(String competition) {
-        this.competition = competition;
-    }
-    public void setPlayer1(String player1) {
-        this.player1 = player1;
-    }
-    public void setPlayer2(String player2) {
-        this.player2 = player2;
-    }*/
 
 
     public String calculatePrice(String headline) {

@@ -1,38 +1,16 @@
-public class FutbolNew extends New{
+public class FutbolNews extends News {
 
     private String competition;
     private String club;
     private String player;
 
 
-    public FutbolNew(String headline , String competition , String club , String player) {
+    public FutbolNews(String headline , String competition , String club , String player) {
         super(headline);
         this.competition = competition;
         this.club = club;
         this.player = player;
     }
-
-    /*public String getCompetition() {
-        return this.competition;
-    }
-    public String getClub() {
-        return this.club;
-    }
-    public String getPlayer() {
-        return this.player;
-    }*/
-
-
-    /*public void setCompetition(String competition) {
-        this.competition = competition;
-    }
-    public void setClub(String club) {
-        this.club = club;
-    }
-    public void setPlayer(String player) {
-        this.player = player;
-    }*/
-
 
     public String calculatePrice(String headline) {
         int finalPrice = 300;

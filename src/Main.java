@@ -1,11 +1,10 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
 
 
         static ArrayList<Editor> editors = new ArrayList<Editor>();
-        static ArrayList<New> news = new ArrayList<New>();
+        static ArrayList<News> news = new ArrayList<News>();
 
         public static void main(String[] args) {
 

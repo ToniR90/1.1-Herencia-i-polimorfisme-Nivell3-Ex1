@@ -1,86 +1,39 @@
 public class NewsMethod {
 
-    public static String createFutbolNews(String headline , String competition, String club, String player,
-                                            String name, String dni) {
-        String answer;
+    public static String createNews(News news , String name , String dni){
         int index = EditorMethod.searchEditor(name, dni);
-
+        String answer;
         if (index == -1) {
             answer = "The profile doesn't exist in the database";
         } else {
-            FutbolNew newFutbolNew = new FutbolNew(headline, competition, club, player);
-            Main.news.add(newFutbolNew);
-            Main.editors.get(index).setNews(newFutbolNew);
-            answer = "Futbol news created";
+            Main.news.add(news);
+            Main.editors.get(index).setNews(news);
+            answer = news.getClass().getName() + " created";
         }
-
         return answer;
+    }
+
+    public static String createFutbolNews(String headline , String competition, String club, String player,
+                                            String name, String dni) {
+        return createNews(new FutbolNews(headline , competition , club , player) , name , dni);
     }
 
     public static String createBasketNews(String headline, String competition, String club, String name,
                                              String dni) {
-        String answer = "";
-        int index = EditorMethod.searchEditor(name, dni);
-
-        if (index == -1) {
-            answer = "The profile doesn't exist in the database";
-        } else {
-            BasketNew newBasketNew = new BasketNew(headline, competition, club);
-            Main.news.add(newBasketNew);
-            Main.editors.get(index).setNews(newBasketNew);
-            answer = "Basket news created";
-        }
-
-        return answer;
+        return createNews(new BasketNews(headline , competition , club) , name , dni);
     }
 
     public static String createTennisNews(String headline, String competition, String player1,
                                            String player2, String name, String dni) {
-        String answer = "";
-        int index = EditorMethod.searchEditor(name, dni);
-
-        if (index == -1) {
-            answer = "The profile doesn't exist in the database";
-        } else {
-            TennisNew newTennisNew = new TennisNew(headline , competition, player1, player2);
-            Main.news.add(newTennisNew);
-            Main.editors.get(index).setNews(newTennisNew);
-            answer = "Tennis news created";
-        }
-
-        return answer;
+        return createNews(new TennisNews(headline , competition , player1 , player2) , name , dni);
     }
 
     public static String createF1News(String headline, String team, String name, String dni) {
-        String answer = "";
-        int index = EditorMethod.searchEditor(name, dni);
-
-        if (index == -1) {
-            answer = "The profile doesn't exist in the database";
-        } else {
-            F1New newF1New = new F1New(headline, team);
-            Main.news.add(newF1New);
-            Main.editors.get(index).setNews(newF1New);
-            answer = "F1 news created";
-        }
-
-        return answer;
+        return createNews(new F1News(headline , team) , name , dni);
     }
 
     public static String createMotoNews(String headline, String motoTeam, String name, String dni) {
-        String answer = "";
-        int index = EditorMethod.searchEditor(name, dni);
-
-        if (index == -1) {
-            answer = "The profile doesn't exist in the database";
-        } else {
-            MotoNew newMotoNew = new MotoNew(headline, motoTeam);
-            Main.news.add(newMotoNew);
-            Main.editors.get(index).setNews(newMotoNew);
-            answer = "Moto news created";
-        }
-
-        return answer;
+       return createNews(new MotoNews(headline , motoTeam) , name , dni);
     }
 
     public static String deleteNews(String name, String dni , String headline) {
