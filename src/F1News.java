@@ -15,7 +15,7 @@ public class F1News extends News {
         if(this.team.equalsIgnoreCase("ferrari") || this.team.equalsIgnoreCase("mercedes")) {
             finalPrice += 50;
         }
-        return "El preu de la noticia és de " + finalPrice + " €\n";
+        return "News price is " + finalPrice + " €\n";
     }
 
     public String calculateScore(String headline) {
@@ -24,7 +24,7 @@ public class F1News extends News {
         if(this.team.equalsIgnoreCase("ferrari") || this.team.equalsIgnoreCase("mercedes")) {
             finalPunctuation += 2;
         }
-        return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
+        return "News score is " + finalPunctuation + "\n";
     }
 
 }

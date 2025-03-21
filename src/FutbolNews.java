@@ -25,7 +25,7 @@ public class FutbolNews extends News {
             finalPrice += 50;
         }
 
-        return "El preu de la noticia és de " + finalPrice + " €\n";
+        return "News price is " + finalPrice + " €\n";
     }
 
     public String calculateScore(String headline) {
@@ -42,7 +42,7 @@ public class FutbolNews extends News {
         if(this.player.equalsIgnoreCase("ferran torres") || this.player.equalsIgnoreCase("benzema")) {
             finalPunctuation += 1;
         }
-        return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
+        return "News score is " + finalPunctuation + "\n";
     }
 
 

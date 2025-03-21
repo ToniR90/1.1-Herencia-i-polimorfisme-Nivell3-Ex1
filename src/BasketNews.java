@@ -19,7 +19,7 @@ public class BasketNews extends News {
         if(this.club.equalsIgnoreCase("barça") || this.club.equalsIgnoreCase("madrid")) {
             finalPrice += 75;
         }
-        return "El preu de la noticia és de " + finalPrice + " €\n";
+        return "News price is " + finalPrice + " €\n";
     }
 
     public String calculateScore(String headline) {
@@ -33,7 +33,7 @@ public class BasketNews extends News {
         if(this.club.equalsIgnoreCase("barça") || this.club.equalsIgnoreCase("madrid")) {
             finalPunctuation += 1;
         }
-        return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
+        return "News score is " + finalPunctuation + "\n";
     }
 
 }

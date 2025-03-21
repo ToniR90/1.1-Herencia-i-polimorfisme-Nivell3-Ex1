@@ -13,7 +13,7 @@ public class MotoNews extends News {
         if(this.motoTeam.equalsIgnoreCase("honda") || this.motoTeam.equalsIgnoreCase("yamaha")) {
             finalPrice += 50;
         }
-        return "El preu de la noticia és de " + finalPrice + " €\n";
+        return "News price is " + finalPrice + " €\n";
     }
 
     public String calculateScore(String headline) {
@@ -22,7 +22,7 @@ public class MotoNews extends News {
         if(this.motoTeam.equalsIgnoreCase("honda") || this.motoTeam.equalsIgnoreCase("yamaha")) {
             finalPunctuation += 3;
         }
-        return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
+        return "News score is " + finalPunctuation + "\n";
     }
 
 }

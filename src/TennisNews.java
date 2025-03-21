@@ -23,7 +23,7 @@ public class TennisNews extends News {
                 || this.player2.equalsIgnoreCase("djokovic")){
         finalPrice += 100;
     }
-        return "El preu de la noticia és de " + finalPrice + " €\n";
+        return "News price is " + finalPrice + " €\n";
     }
     public String calculateScore(String headline) {
         int finalPunctuation = 4;
@@ -35,7 +35,7 @@ public class TennisNews extends News {
                 || this.player2.equalsIgnoreCase("djokovic")){
             finalPunctuation += 3;
         }
-        return "La puntuació de la noticia és de " + finalPunctuation + " punts\n";
+        return "News score is " + finalPunctuation + "\n";
     }
 
 }

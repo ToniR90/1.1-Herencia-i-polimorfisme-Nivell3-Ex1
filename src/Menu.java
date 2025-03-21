@@ -4,17 +4,6 @@ public class Menu {
 
     static Scanner scanner = new Scanner((System.in));
 
-    public static void startMenu() {
-        int option;
-
-        do{
-            option = userOption();
-            Controllers.processOption(option);
-
-        }while(option != 0);
-    }
-
-
     public static int userOption(){
         int option;
 
@@ -41,7 +30,7 @@ public class Menu {
                 "3. Tennis news\n" +
                 "4. F1 news\n" +
                 "5. Moto news\n" +
-                "6. Exit");
+                "0. Exit");
         option = scanner.nextInt();
 
         return option;

@@ -72,7 +72,7 @@ public class NewsMethod {
                 i++;
             }
         }
-        return "Els titulars del redactor/a " + name + " són: \n" + answer;
+        return "Editor " + name + " has these news: \n" + answer;
     }
 
     public static int searchNews(String headline) {
