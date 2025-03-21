@@ -10,7 +10,7 @@ public class EditorMethod {
             Main.editors.add(newEditor);
             answer = "The editor has been created";
         }
-        return answer;
+        return answer + "\n";
     }
 
 
@@ -36,7 +36,7 @@ public class EditorMethod {
             Main.editors.remove(index);
             answer = "The profile has been deleted";
         }
-        return answer;
+        return answer + "\n";
     }
 
 

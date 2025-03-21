@@ -15,7 +15,7 @@ public class Menu {
                 "5. Show news by editor\n" +
                 "6. Calculate news score\n" +
                 "7. Calculate news price\n" +
-                "0. Exit");
+                "0. Exit\n");
         option = scanner.nextInt();
 
         return option;
@@ -30,7 +30,7 @@ public class Menu {
                 "3. Tennis news\n" +
                 "4. F1 news\n" +
                 "5. Moto news\n" +
-                "0. Exit");
+                "0. Exit\n");
         option = scanner.nextInt();
 
         return option;

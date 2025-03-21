@@ -9,7 +9,7 @@ public class Controllers {
         String name = scanner.nextLine();
         System.out.println("Insert editor's DNI");
         String dni = scanner.nextLine();
-        return EditorMethod.createEditor(name , dni);
+        return EditorMethod.createEditor(name , dni) + "\n";
     }
 
     public static String option2 (int option){
@@ -17,7 +17,7 @@ public class Controllers {
         String name = scanner.nextLine();
         System.out.println("Insert editor's DNI");
         String dni = scanner.nextLine();
-        return EditorMethod.deleteEditor(dni);
+        return EditorMethod.deleteEditor(dni) + "\n";
     }
 
     public static String option4(int option){
@@ -27,21 +27,21 @@ public class Controllers {
         String dni = scanner.nextLine();
         System.out.println("Insert the headline");
         String headline = scanner.nextLine();
-        return NewsMethod.deleteNews(name , dni , headline);
+        return NewsMethod.deleteNews(name , dni , headline) + "\n";
     }
 
     public static String option5(int option){
-        System.out.println("Insert the editor's name);");
+        System.out.println("Insert the editor's name");
         String name = scanner.nextLine();
         System.out.println("Insert the editor's DNI");
         String dni = scanner.nextLine();
-        return NewsMethod.showNews(name , dni);
+        return NewsMethod.showNews(name , dni) + "\n";
     }
 
     public static String option6(int option){
         String answer;
         System.out.println("Insert the headline of the news");
-        scanner.nextLine();
+        //scanner.nextLine();
         String headline = scanner.nextLine();
 
         if (NewsMethod.searchNews(headline) == -1) {
@@ -49,13 +49,13 @@ public class Controllers {
         } else {
             answer = Main.news.get(NewsMethod.searchNews(headline)).calculateScore(headline);
         }
-        return answer;
+        return answer + "\n";
     }
 
     public static String option7(int option){
         String answer;
         System.out.println("Insert the headline");
-        scanner.nextLine();
+        //scanner.nextLine();
         String headline = scanner.nextLine();
 
         if (NewsMethod.searchNews(headline) == -1) {
@@ -63,7 +63,7 @@ public class Controllers {
         } else {
             answer = Main.news.get(NewsMethod.searchNews(headline)).calculatePrice(headline);
         }
-        return answer;
+        return answer + "\n";
     }
 
 
@@ -79,7 +79,7 @@ public class Controllers {
         String player = scanner.nextLine();
         System.out.println("Verify the editor's DNI");
         String dni = scanner.nextLine();
-        return NewsMethod.createFutbolNews(headline , competition , club , player , dni);
+        return NewsMethod.createFutbolNews(headline , competition , club , player , dni) + "\n";
     }
 
     public static String basketOption(){
@@ -91,7 +91,7 @@ public class Controllers {
         String club = scanner.nextLine();
         System.out.println("Verify the editor's DNI");
         String dni = scanner.nextLine();
-        return NewsMethod.createBasketNews(headline , competition , club , dni);
+        return NewsMethod.createBasketNews(headline , competition , club , dni) + "\n";
     }
 
     public static String tennisOption(){
@@ -105,7 +105,7 @@ public class Controllers {
         String player2 = scanner.nextLine();
         System.out.println("Verify the editor's DNI");
         String dni = scanner.nextLine();
-        return NewsMethod.createTennisNews(headline , competition , player1 , player2 , dni);
+        return NewsMethod.createTennisNews(headline , competition , player1 , player2 , dni) + "\n";
     }
 
     public static String f1Option(){
@@ -115,7 +115,7 @@ public class Controllers {
         String team = scanner.nextLine();
         System.out.println("Verify the editor's DNI");
         String dni = scanner.nextLine();
-        return NewsMethod.createF1News(headline , team , dni);
+        return NewsMethod.createF1News(headline , team , dni) + "\n";
     }
 
     public static String motoOption(){
@@ -125,6 +125,6 @@ public class Controllers {
         String motoTeam = scanner.nextLine();
         System.out.println("Verify the editor's DNI");
         String dni = scanner.nextLine();
-        return NewsMethod.createMotoNews(headline , motoTeam , dni);
+        return NewsMethod.createMotoNews(headline , motoTeam , dni) + "\n";
     }
 }
